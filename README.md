@@ -6,8 +6,10 @@
 - fishbot_description 机器人模型的描述文件，包含仿真相关配置
 - fishbot_navigation2 导航配置
 - fishbot_application 应用功能节点
-    - 实时获得当前位置 get_robot_pose
-    - 设置初始位置 init_robot_pose
+    - fishbot_interface  提供易用的对外接口，屏蔽ros细节
+        - 实时获得当前位置 get_robot_pose
+        - 设置初始位置 init_robot_pose
+    - test
 
 ## 2.使用方法   
 
@@ -28,7 +30,7 @@ sudo apt install ros-$ROS_DISTRO-nav2-bringup ros-$ROS_DISTRO-slam-toolbox
 2. 安装仿真相关功能包
 
 ```
-sudo apt install ros-$ROS_DISTRO-robot-state-publisher  ros-$ROS_DISTRO-joint-state-publisher gazebo ros-$ROS_DISTRO-gazebo-ros-pkgs ros-$ROS_DISTRO-ros2-controllers ros-$ROS_DISTRO-xacro
+sudo apt install ros-$ROS_DISTRO-robot-state-publisher  ros-$ROS_DISTRO-joint-state-publisher ros-$ROS_DISTRO-ros2-control gazebo ros-$ROS_DISTRO-gazebo-ros-pkgs ros-$ROS_DISTRO-ros2-controllers ros-$ROS_DISTRO-gazebo-ros2-control ros-$ROS_DISTRO-xacro 
 ```
 
 3. 安装transforms3d库，欧拉角<-->四元数
